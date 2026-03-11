@@ -1,6 +1,6 @@
-import subprocess, sys
-subprocess.check_call([sys.executable, "-m", "pip", "install", "cvxpy"], stdout=subprocess.DEVNULL)
-subprocess.check_call([sys.executable, "-m", "pip", "install", "networkx>=3.4"], stdout=subprocess.DEVNULL)
+# import subprocess, sys
+# subprocess.check_call([sys.executable, "-m", "pip", "install", "cvxpy"], stdout=subprocess.DEVNULL)
+# subprocess.check_call([sys.executable, "-m", "pip", "install", "networkx>=3.4"], stdout=subprocess.DEVNULL)
 
 import networkx as nx, cvxpy, numpy as np
 np.float_ = np.float64
@@ -19,15 +19,15 @@ def mincover(graph: nx.Graph)->set:
     0
     """
     # Your code here
-    pass
+    return {}
 
-
-def test_mincover():
-    # Your tests here
-    pass
 
 if __name__ == '__main__':
-    edges=eval(input())
-    graph = nx.Graph(edges)
-    print(len(mincover(graph)))
+    import doctest
+    print(doctest.testmod())
+
+    # Use this code for testing via console input-output:
+    # edges=eval(input())
+    # graph = nx.Graph(edges)
+    # print(len(mincover(graph)))
 
